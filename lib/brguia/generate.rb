@@ -58,5 +58,19 @@ module Brguia
       numero_guia + data_vencimento + vago + tipo_guia
     end
 
+    def codigo_com_verificador
+      digito = Brguia::GenerateDigito.gerar(codigo_sem_verificador)
+      codigo = codigo_sem_verificador.slice(0..2) + digito + codigo_sem_verificador.slice(3..43)
+    end
+
+    def codigo_de_barras
+      arr = Brguia::Helper.divide_codigo(codigo_com_verificador)
+      codigo = ""
+      codigo << arr[0] + Brguia::GenerateDigito.gerar(arr[0])
+      codigo << arr[1] + Brguia::GenerateDigito.gerar(arr[1])
+      codigo << arr[2] + Brguia::GenerateDigito.gerar(arr[2])
+      codigo << arr[3] + Brguia::GenerateDigito.gerar(arr[3])
+    end
+
   end
 end

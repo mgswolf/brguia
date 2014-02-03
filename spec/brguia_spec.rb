@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe Brguia do
   let(:guia) { Brguia::Generate.new(parametros_guia)}
-  pending "generate barcode"
 
   context 'gera valores padrão' do
     subject { guia }
@@ -15,6 +14,14 @@ describe Brguia do
 
   it 'gera codigo sem verificador' do
     expect(guia.codigo_sem_verificador).to eq('8560000000759001430000000012320140228000001')
+  end
+
+  it 'gera codigo com verificador' do
+    expect(guia.codigo_com_verificador).to eql('85680000000759001430000000012320140228000001')
+  end
+
+  it "gera codigo de barras" do
+    expect(guia.codigo_de_barras).to eql('856800000007759001430009000001232016402280000017')
   end
 
   def parametros_guia

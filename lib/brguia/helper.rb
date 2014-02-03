@@ -16,5 +16,13 @@ module Brguia
       data.gsub(/\D/,'')
     end
 
+    def self.divide_codigo(codigo)
+       arr= [
+        codigo.slice(0..10),
+        codigo.slice(11..21),
+        codigo.slice(22..32),
+        codigo.slice(33..43),
+       ]
+    end
   end
 end
