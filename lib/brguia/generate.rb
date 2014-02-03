@@ -16,12 +16,22 @@ module Brguia
     end
 
     def valor
-      Brguia::Helper.limpar_numero(@valor)
+      valor = Brguia::Helper.limpar_numero(@valor)
+      Brguia::Helper.completa_zeros(valor,11)
     end
 
     def numero_guia
       Brguia::Helper.completa_zeros(@numero_guia,11)
     end
+
+    def tipo_guia
+      Brguia::Helper.completa_zeros(@tipo_guia,2)
+    end
+
+    def data_vencimento
+      Brguia::Helper.formatar_data(@data_vencimento)
+    end
+
 
     def arrecadacao_default
       '8'
@@ -42,5 +52,11 @@ module Brguia
     def vago_default
       '0000'
     end
+
+    def codigo_sem_verificador
+      codigo = arrecadacao + segmento + tipo_moeda + valor + codigo_febraban +
+      numero_guia + data_vencimento + vago + tipo_guia
+    end
+
   end
 end
