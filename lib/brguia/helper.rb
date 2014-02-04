@@ -17,7 +17,7 @@ module Brguia
     end
 
     def self.divide_codigo(codigo)
-       arr= [
+       arr = [
         codigo.slice(0..10),
         codigo.slice(11..21),
         codigo.slice(22..32),

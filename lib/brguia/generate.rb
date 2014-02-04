@@ -1,8 +1,12 @@
 module Brguia
+  # Gera o codigo do boleto
+  # @param options Hash
+  # @return [String] o codigo final com o digitos verificadores
   class Generate
 
     attr_reader :data_vencimento, :tipo_guia, :arrecadacao, :segmento,
                 :tipo_moeda, :codigo_febraban, :vago
+
     def initialize(options= {})
       @valor           = options[:valor]
       @numero_guia     = options[:numero_guia]
@@ -70,6 +74,10 @@ module Brguia
       codigo << arr[1] + Brguia::GenerateDigito.gerar(arr[1])
       codigo << arr[2] + Brguia::GenerateDigito.gerar(arr[2])
       codigo << arr[3] + Brguia::GenerateDigito.gerar(arr[3])
+    end
+
+    def imprimir
+      impressao  = Brguia::Impressao.new(codigo_de_barras, :options =>{ :filename => "#{numero_guia}.pdf"})
     end
 
   end
