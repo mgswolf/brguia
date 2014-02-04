@@ -24,8 +24,8 @@ describe Brguia do
     expect(guia.codigo_de_barras).to eql('856800000007759001430009000001232016402280000017')
   end
 
-  it "imprime e exporta como pdf" do
-    expect(guia.imprimir).to be
+  it "imprime e exporta utilizando rghost" do
+    expect(ImpressaoRGhost.new(guia)).to be
   end
 
   def parametros_guia

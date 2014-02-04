@@ -76,9 +76,5 @@ module Brguia
       codigo << arr[3] + Brguia::GenerateDigito.gerar(arr[3])
     end
 
-    def imprimir
-      impressao  = Brguia::Impressao.new(codigo_de_barras, :options =>{ :filename => "#{numero_guia}.pdf"})
-    end
-
   end
 end

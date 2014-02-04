@@ -1,28 +1,33 @@
-require 'rghost'
-require 'rghost_barcode'
 module Brguia
   class Impressao
 
-    attr_reader :filename
-    def initialize(codigo, options = {})
-      @codigo = codigo
-      @codificacao = options[:codificacao] || codificacao_default
+    attr_reader :format, :codificacao
+    # recebe o objeto gerado no Generate.new
+    # @param [Generate] Instancia da classe Brguia::Generate.
+    # @param [Hash] options Opção para a impressão da guia.
+    # @option options [Symbol] :format [:pdf, :png, :jpeg, :tif, :ps]
+    def initialize(guia, options = {})
+      @guia = guia
       @filename = options[:filename] || filename_default
+      @format = options[:format] || format_default
       gerar
     end
 
-    def codificacao_default
-      'barcode_code2of5'
+    def filename_default
+      'guia'
     end
 
-    def filename_default
-      'guia.pdf'
+    def format_default
+      :pdf
+    end
+
+    def filename
+      "#{@filename}.#{@format.to_s}"
     end
 
     def gerar
-      doc = RGhost::Document.new
-      doc.barcode_interleaved2of5(@codigo,:text => {:size => 6, :width => 1, :heigth => 2})
-      doc.render :pdf, :filename => filename
+      raise NotImplementedError
     end
+
   end
 end
