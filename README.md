@@ -23,48 +23,48 @@ Or install it yourself as:
 
 ## Layout
 
-    <table>
-      <tr>
-        <td>POSIÇÃO</td>
-        <td>TAMANHO</td>
-        <td>CONTEÚDO</td>
-      </tr>
-      <tr>
-        <td>01 – 01</td>
-        <td>1</td>
-        <td>Identificação do Produto</td>
-      </tr>
-      <tr>
-        <td>02 – 02</td>
-        <td>1</td>
-        <td>Identificação do Segmento </td>
-      </tr>
-      <tr>
-        <td>03 – 03</td>
-        <td>1</td>
-        <td> Identificação do valor real ou referência </td>
-      </tr>
-      <tr>
-        <td>04 – 04</td>
-        <td>1</td>
-        <td>Dígito verificador geral (módulo 10 ou 11) </td>
-      </tr>
-      <tr>
-        <td>05 – 15</td>
-        <td>11</td>
-        <td>Valor </td>
-      </tr>
-      <tr>
-        <td>16 – 19</td>
-        <td>4</td>
-        <td>Identificação da Empresa/Órgão </td>
-      </tr>
-      <tr>
-        <td>20 – 44</td>
-        <td>25</td>
-        <td>Campo livre de utilização da Empresa/Órgão </td>
-      </tr>
-    </table>
+  <table>
+    <tr>
+      <td>POSIÇÃO</td>
+      <td>TAMANHO</td>
+      <td>CONTEÚDO</td>
+    </tr>
+    <tr>
+      <td>01 – 01</td>
+      <td>1</td>
+      <td>Identificação do Produto</td>
+    </tr>
+    <tr>
+      <td>02 – 02</td>
+      <td>1</td>
+      <td>Identificação do Segmento </td>
+    </tr>
+    <tr>
+      <td>03 – 03</td>
+      <td>1</td>
+      <td> Identificação do valor real ou referência </td>
+    </tr>
+    <tr>
+      <td>04 – 04</td>
+      <td>1</td>
+      <td>Dígito verificador geral (módulo 10 ou 11) </td>
+    </tr>
+    <tr>
+      <td>05 – 15</td>
+      <td>11</td>
+      <td>Valor </td>
+    </tr>
+    <tr>
+      <td>16 – 19</td>
+      <td>4</td>
+      <td>Identificação da Empresa/Órgão </td>
+    </tr>
+    <tr>
+      <td>20 – 44</td>
+      <td>25</td>
+      <td>Campo livre de utilização da Empresa/Órgão </td>
+    </tr>
+  </table>
 
 ## Impressão
   A gem Brguia gera apenas o código númerico de acordo com a FEBRABAN.
