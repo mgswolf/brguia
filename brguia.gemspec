@@ -9,8 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Marcelo Giovane Silva"]
   spec.email         = ["mgswolf@gmail.com"]
   spec.summary       = %q{Geração de Guias de recolhimennto}
-  spec.description   = %q{Geração de Guias de recolhimennto para orgãos públicos
-                           \ngerado com RGhost}
+  spec.description   = %q{Geração de Guias de recolhimennto para orgãos públicos}
   spec.homepage      = "http://github.com/mgswolf/brguia"
   spec.license       = "MIT"
 
@@ -23,8 +22,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake"
   spec.add_development_dependency "rspec"
   spec.add_development_dependency "yard"
-
-  spec.add_runtime_dependency "rghost"
-  spec.add_runtime_dependency "rghost_barcode"
 
 end
