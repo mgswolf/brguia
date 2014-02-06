@@ -33,37 +33,37 @@ Or install it yourself as:
         <td>01 – 01</td>
         <td>1</td>
         <td>Identificação do Produto</td>
-      <td>
+      </tr>
       <tr>
         <td>02 – 02</td>
         <td>1</td>
         <td>Identificação do Segmento </td>
-      <td>
+      </tr>
       <tr>
         <td>03 – 03</td>
         <td>1</td>
         <td> Identificação do valor real ou referência </td>
-      <td>
+      </tr>
       <tr>
         <td>04 – 04</td>
         <td>1</td>
         <td>Dígito verificador geral (módulo 10 ou 11) </td>
-      <td>
+      </tr>
       <tr>
         <td>05 – 15</td>
         <td>11</td>
         <td>Valor </td>
-      <td>
+      </tr>
       <tr>
         <td>16 – 19</td>
         <td>4</td>
         <td>Identificação da Empresa/Órgão </td>
-      <td>
+      </tr>
       <tr>
         <td>20 – 44</td>
         <td>25</td>
         <td>Campo livre de utilização da Empresa/Órgão </td>
-      <td>
+      </tr>
     </table>
 
 ## Impressão
