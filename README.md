@@ -18,19 +18,53 @@ Or install it yourself as:
 
 ## Usage
 
-  guia = Bguia::Generate.new({:valor => '99,00', :codigo_febraban => '1234' })
-  guia.codigo_de_barras
+    guia = Bguia::Generate.new({:valor => '99,00', :codigo_febraban => '1234' })
+    guia.codigo_de_barras
 
 ## Layout
 
-| POSIÇÃO   |TAMANHO | CONTEÚDO                                  |
-| 01 – 01   | 1      | Identificação do Produto                  |
-| 02 – 02   | 1      | Identificação do Segmento                 |
-| 03 – 03   | 1      | Identificação do valor real ou referência |
-| 04 – 04   | 1      | Dígito verificador geral (módulo 10 ou 11)|
-| 05 – 15   | 11     | Valor                                     |
-| 16 – 19   | 4      | Identificação da Empresa/Órgão            |
-| 20 – 44   | 25     | Campo livre de utilização da Empresa/Órgão|
+    <table>
+      <tr>
+        <td>POSIÇÃO</td>
+        <td>TAMANHO</td>
+        <td>CONTEÚDO</td>
+      </tr>
+      <tr>
+        <td>01 – 01</td>
+        <td>1</td>
+        <td>Identificação do Produto</td>
+      <td>
+      <tr>
+        <td>02 – 02</td>
+        <td>1</td>
+        <td>Identificação do Segmento </td>
+      <td>
+      <tr>
+        <td>03 – 03</td>
+        <td>1</td>
+        <td> Identificação do valor real ou referência </td>
+      <td>
+      <tr>
+        <td>04 – 04</td>
+        <td>1</td>
+        <td>Dígito verificador geral (módulo 10 ou 11) </td>
+      <td>
+      <tr>
+        <td>05 – 15</td>
+        <td>11</td>
+        <td>Valor </td>
+      <td>
+      <tr>
+        <td>16 – 19</td>
+        <td>4</td>
+        <td>Identificação da Empresa/Órgão </td>
+      <td>
+      <tr>
+        <td>20 – 44</td>
+        <td>25</td>
+        <td>Campo livre de utilização da Empresa/Órgão </td>
+      <td>
+    </table>
 
 ## Impressão
   A gem Brguia gera apenas o código númerico de acordo com a FEBRABAN.
