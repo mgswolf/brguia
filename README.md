@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-    guia = Bguia::Generate.new(:valor => '99,00', :codigo_febraban => '1234')
+    guia = Brguia::Generate.new(:valor => '99,00', :codigo_febraban => '1234')
     guia.codigo_de_barras
 
 ## Layout
