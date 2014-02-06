@@ -18,7 +18,7 @@ Or install it yourself as:
 
 ## Usage
 
-    guia = Bguia::Generate.new({:valor => '99,00', :codigo_febraban => '1234' })
+    guia = Bguia::Generate.new(:valor => '99,00', :codigo_febraban => '1234')
     guia.codigo_de_barras
 
 ## Layout
@@ -68,8 +68,8 @@ Or install it yourself as:
 
 ## Impressão
   A gem Brguia gera apenas o código númerico de acordo com a FEBRABAN.
-  A geração e impressão do código de barras deve ser realizada à parte,
-  a codificação que deve ser utilizada é: "2 de 5 intercalado"
+  A geração e impressão do código de barras deve ser realizada à parte.
+  A codificação que deve ser utilizada é: "2 de 5 intercalado"
   recomendo a gem [ghost_barcode](http://github.com/shairontoledo/rghost-barcode "RGhost Barcode").
 
 
