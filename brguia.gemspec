@@ -8,9 +8,10 @@ Gem::Specification.new do |spec|
   spec.version       = Brguia::VERSION
   spec.authors       = ["Marcelo Giovane Silva"]
   spec.email         = ["mgswolf@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{Geração de Guias de recolhimennto}
+  spec.description   = %q{Geração de Guias de recolhimennto para orgãos públicos
+                           \ngerado com RGhost}
+  spec.homepage      = "http://github.com/mgswolf/brguia"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
